@@ -9,7 +9,7 @@ class RunnerTest(unittest.TestCase):
         try:
             runner_1 = Runner('Петя', -15)      # отрицательная скорость
             runner_1.walk()
-            self.assertEqual(runner_1.distance, 50)                                   # проверка на условия
+            self.assertEqual(runner_1.distance, 50)                                     # проверка на условия
             logging.info(f'"test_walk" выполнен успешно', exc_info=True)                # сообщение при выполнении
         except ValueError:
             logging.warning(f'Неверная скорость для Runner', exc_info=True)             # сообщение при ошибке
@@ -19,7 +19,7 @@ class RunnerTest(unittest.TestCase):
         try:
             runner_2 = Runner(50)                     # отсутствует имя
             runner_2.run()
-            self.assertEqual(runner_2.distance, 100)                                  # проверка на условия
+            self.assertEqual(runner_2.distance, 100)                                    # проверка на условия
             logging.info(f'"test_walk" выполнен успешно', exc_info=True)                # сообщение при выполнении
         except TypeError:
             logging.warning(f"Неверный тип данных для объекта Runner", exc_info=True)   # сообщение при ошибке
